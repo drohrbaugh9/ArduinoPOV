@@ -412,6 +412,42 @@ void display(const byte letter[7][6]) {
 void displayLetter(char c) {
   c = toupper(c);
   switch (c) {
+    case ' ':
+      display(Sp); break;
+    case '!':
+      display(Ex); break;
+    case '(':
+      display(Op); break;
+    case ')':
+      display(Cp); break;
+    case ',':
+      display(Co); break;
+    case '.':
+      display(Pe); break;
+    case '/':
+      display(Fs); break;
+    case '0':
+      display(Zer); break;
+    case '1':
+      display(One); break;
+    case '2':
+      display(Two); break;
+    case '3':
+      display(Thr); break;
+    case '4':
+      display(Fou); break;
+    case '5':
+      display(Fiv); break;
+    case '6':
+      display(Six); break;
+    case '7':
+      display(Sev); break;
+    case '8':
+      display(Eig); break;
+    case '9':
+      display(Nin); break;
+    case '?':
+      display(Qu); break;
     case 'A':
       display(A); break;
     case 'B':
@@ -462,36 +498,6 @@ void displayLetter(char c) {
       display(X); break;
     case 'Z':
       display(Z); break;
-    case '!':
-      display(Ex); break;
-    case '?':
-      display(Qu); break;
-    case ',':
-      display(Co); break;
-    case '.':
-      display(Pe); break;
-    case ' ':
-      display(Sp); break;
-    case '1':
-      display(One); break;
-    case '2':
-      display(Two); break;
-    case '3':
-      display(Thr); break;
-    case '4':
-      display(Fou); break;
-    case '5':
-      display(Fiv); break;
-    case '6':
-      display(Six); break;
-    case '7':
-      display(Sev); break;
-    case '8':
-      display(Eig); break;
-    case '9':
-      display(Nin); break;
-    case '0':
-      display(Zer); break;
   }
 }
 
