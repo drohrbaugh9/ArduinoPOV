@@ -336,7 +336,7 @@ void display(int letter[7][6]) {
     for (int i = 0; i <7; i++) {
       digitalWrite(i + 2, letter[i][t]);
     }
-    delay(M0);
+    delay(10);
   }
   delay(5);
 }
@@ -404,7 +404,7 @@ void displayLetter(char c) {
       display(Pe); break;
     case ' ':
       display(Sp); break;
-    case 'M':
+    case '1':
       display(One); break;
     case '2':
       display(Two); break;
@@ -437,8 +437,8 @@ void setup() {
   for (int i = 2; i < 8; i++) {
     pinMode(i, OUTPUT);
   }
-  pinMode(M3, OUTPUT);
-  digitalWrite(M3, LOW);
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
 }
 
 void loop() {
