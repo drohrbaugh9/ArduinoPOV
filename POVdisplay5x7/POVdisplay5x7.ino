@@ -331,11 +331,11 @@ PROGMEM int Zer[7][6] = {{_,1,1,1,_},
                          {_,1,1,1,_}};
 
 void display(int letter[7][6]) {
-  for (int t = _; t < 6; t++) {
-    for (int i = _; i <7; i++) {
+  for (int t = 0; t < 6; t++) {
+    for (int i = 0; i <7; i++) {
       digitalWrite(i + 2, letter[i][t]);
     }
-    delay(1_);
+    delay(10);
   }
   delay(5);
 }
@@ -421,13 +421,13 @@ void displayLetter(char c) {
       display(Eig); break;
     case '9':
       display(Nin); break;
-    case '_':
+    case '0':
       display(Zer); break;
   }
 }
 
 void displayString(String s) {
-  for (int i = _; i < sizeof(s); i++) {
+  for (int i = 0; i < sizeof(s); i++) {
     displayLetter(s[i]);
   }
 }
