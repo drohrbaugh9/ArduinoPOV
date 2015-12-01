@@ -1,9 +1,9 @@
 #include <avr/pgmspace.h>
 
-PROGMEM byte _ = B0;
-PROGMEM byte M = B1;
+const PROGMEM byte _ = B0;
+const PROGMEM byte M = B1;
 
-PROGMEM byte A[7][6] =
+const PROGMEM byte A[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -12,7 +12,7 @@ PROGMEM byte A[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte B[7][6] =
+const PROGMEM byte B[7][6] =
 {{M,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -21,7 +21,7 @@ PROGMEM byte B[7][6] =
  {M,_,_,_,M,_},
  {M,M,M,M,_,_}};
 
-PROGMEM byte C[7][6] =
+const PROGMEM byte C[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,_,_},
@@ -30,7 +30,7 @@ PROGMEM byte C[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte D[7][6] =
+const PROGMEM byte D[7][6] =
 {{M,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -39,7 +39,7 @@ PROGMEM byte D[7][6] =
  {M,_,_,_,M,_},
  {M,M,M,M,_,_}};
 
-PROGMEM byte E[7][6] =
+const PROGMEM byte E[7][6] =
 {{M,M,M,M,M,_},
  {M,_,_,_,_,_},
  {M,_,_,_,_,_},
@@ -48,7 +48,7 @@ PROGMEM byte E[7][6] =
  {M,_,_,_,_,_},
  {M,M,M,M,M,_}};
                
-PROGMEM byte F[7][6] =
+const PROGMEM byte F[7][6] =
 {{M,M,M,M,M,_},
  {M,_,_,_,_,_},
  {M,_,_,_,_,_},
@@ -57,16 +57,16 @@ PROGMEM byte F[7][6] =
  {M,_,_,_,_,_},
  {M,_,_,_,_,_}};
 
-PROGMEM byte G[7][6] =
+const PROGMEM byte G[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,_,_},
  {M,_,M,M,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
- {_,M,M,M,M},_};
+ {_,M,M,M,M,_}};
 
-PROGMEM byte H[7][6] =
+const PROGMEM byte H[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -75,7 +75,7 @@ PROGMEM byte H[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte I[7][6] =
+const PROGMEM byte I[7][6] =
 {{M,M,M,M,M,_},
  {_,_,M,_,_,_},
  {_,_,M,_,_,_},
@@ -84,7 +84,7 @@ PROGMEM byte I[7][6] =
  {_,_,M,_,_,_},
  {M,M,M,M,M,_}};
 
-PROGMEM byte J[7][6] =
+const PROGMEM byte J[7][6] =
 {{_,_,M,M,M,_},
  {_,_,_,M,_,_},
  {_,_,_,M,_,_},
@@ -93,7 +93,7 @@ PROGMEM byte J[7][6] =
  {M,_,_,M,_,_},
  {_,M,M,_,_,_}};
 
-PROGMEM byte K[7][6] =
+const PROGMEM byte K[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,M,_,_},
@@ -102,7 +102,7 @@ PROGMEM byte K[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte L[7][6] =
+const PROGMEM byte L[7][6] =
 {{M,_,_,_,_,_},
  {M,_,_,_,_,_},
  {M,_,_,_,_,_},
@@ -111,7 +111,7 @@ PROGMEM byte L[7][6] =
  {M,_,_,_,_,_},
  {M,M,M,M,M,_}};
 
-PROGMEM byte M[7][6] =
+const PROGMEM byte lM[7][6] =
 {{M,_,_,_,M,_},
  {M,M,_,M,M,_},
  {M,_,M,_,M,_},
@@ -120,7 +120,7 @@ PROGMEM byte M[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte N[7][6] =
+const PROGMEM byte N[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,M,_,_,M,_},
@@ -129,7 +129,7 @@ PROGMEM byte N[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte O[7][6] =
+const PROGMEM byte O[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -138,7 +138,7 @@ PROGMEM byte O[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte P[7][6] =
+const PROGMEM byte P[7][6] =
 {{M,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -147,7 +147,7 @@ PROGMEM byte P[7][6] =
  {M,_,_,_,_,_},
  {M,_,_,_,_,_}};
 
-PROGMEM byte Q[7][6] =
+const PROGMEM byte Q[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -156,7 +156,7 @@ PROGMEM byte Q[7][6] =
  {M,_,_,M,_,_},
  {_,M,M,_,M,_}};
 
-PROGMEM byte R[7][6] =
+const PROGMEM byte R[7][6] =
 {{M,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -165,7 +165,7 @@ PROGMEM byte R[7][6] =
  {M,_,_,M,_,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte S[7][6] =
+const PROGMEM byte S[7][6] =
 {{_,M,M,M,M,_},
  {M,_,_,_,_,_},
  {M,_,_,_,_,_},
@@ -174,7 +174,7 @@ PROGMEM byte S[7][6] =
  {_,_,_,_,M,_},
  {M,M,M,M,_,_}};
 
-PROGMEM byte T[7][6] =
+const PROGMEM byte T[7][6] =
 {{M,M,M,M,M,_},
  {_,_,M,_,_,_},
  {_,_,M,_,_,_},
@@ -183,7 +183,7 @@ PROGMEM byte T[7][6] =
  {_,_,M,_,_,_},
  {_,_,M,_,_,_}};
 
-PROGMEM byte U[7][6] =
+const PROGMEM byte U[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -192,7 +192,7 @@ PROGMEM byte U[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte V[7][6] =
+const PROGMEM byte V[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -201,7 +201,7 @@ PROGMEM byte V[7][6] =
  {_,M,_,M,_,_},
  {_,_,M,_,_,_}};
 
-PROGMEM byte W[7][6] =
+const PROGMEM byte W[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -210,7 +210,7 @@ PROGMEM byte W[7][6] =
  {M,_,M,_,M,_},
  {_,M,_,M,_,_}};
 
-PROGMEM byte X[7][6] =
+const PROGMEM byte X[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {_,M,_,M,_,_},
@@ -219,7 +219,7 @@ PROGMEM byte X[7][6] =
  {M,_,_,_,M,_},
  {M,_,_,_,M,_}};
 
-PROGMEM byte Y[7][6] =
+const PROGMEM byte Y[7][6] =
 {{M,_,_,_,M,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -228,7 +228,7 @@ PROGMEM byte Y[7][6] =
  {_,_,M,_,_,_},
  {_,_,M,_,_,_}};
 
-PROGMEM byte Z[7][6] =
+const PROGMEM byte Z[7][6] =
 {{M,M,M,M,M,_},
  {_,_,_,_,M,_},
  {_,_,_,M,_,_},
@@ -237,7 +237,7 @@ PROGMEM byte Z[7][6] =
  {M,_,_,_,_,_},
  {M,M,M,M,M,_}};
 
-PROGMEM byte Ex[7][6] =
+const PROGMEM byte Ex[7][6] =
 {{_,_,M,_,_,_},
  {_,_,M,_,_,_},
  {_,_,M,_,_,_},
@@ -246,7 +246,7 @@ PROGMEM byte Ex[7][6] =
  {_,_,M,_,_,_},
  {_,_,M,_,_,_}};
 
-PROGMEM byte Qu[7][6] =
+const PROGMEM byte Qu[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {_,_,_,_,M,_},
@@ -255,7 +255,7 @@ PROGMEM byte Qu[7][6] =
  {_,_,_,_,_,_},
  {_,_,M,_,_,_}};
 
-PROGMEM byte Co[7][6] =
+const PROGMEM byte Co[7][6] =
 {{_,_,_,_,_,_},
  {_,_,_,_,_,_},
  {_,_,_,_,_,_},
@@ -264,7 +264,7 @@ PROGMEM byte Co[7][6] =
  {_,M,_,_,_,_},
  {M,_,_,_,_,_}};
 
-PROGMEM byte Pe[7][6] =
+const PROGMEM byte Pe[7][6] =
 {{_,_,_,_,_,_},
  {_,_,_,_,_,_},
  {_,_,_,_,_,_},
@@ -273,7 +273,7 @@ PROGMEM byte Pe[7][6] =
  {M,M,_,_,_,_},
  {M,M,_,_,_,_}};
 
-PROGMEM byte Sp[7][6] =
+const PROGMEM byte Sp[7][6] =
 {{_,_,_,_,_,_},
  {_,_,_,_,_,_},
  {_,_,_,_,_,_},
@@ -282,7 +282,7 @@ PROGMEM byte Sp[7][6] =
  {_,_,_,_,_,_},
  {_,_,_,_,_,_}};
 
-PROGMEM byte One[7][6] =
+const PROGMEM byte One[7][6] =
 {{_,_,M,_,_,_},
  {_,M,M,_,_,_},
  {_,_,M,_,_,_},
@@ -291,7 +291,7 @@ PROGMEM byte One[7][6] =
  {_,_,M,_,_,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte Two[7][6] =
+const PROGMEM byte Two[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {_,_,_,_,M,_},
@@ -300,7 +300,7 @@ PROGMEM byte Two[7][6] =
  {_,M,_,_,_,_},
  {M,M,M,M,M,_}};
 
-PROGMEM byte Thr[7][6] =
+const PROGMEM byte Thr[7][6] =
 {{M,M,M,M,M,_},
  {_,_,_,M,_,_},
  {_,_,M,_,_,_},
@@ -309,7 +309,7 @@ PROGMEM byte Thr[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte Fou[7][6] =
+const PROGMEM byte Fou[7][6] =
 {{_,_,_,M,_,_},
  {_,_,M,M,_,_},
  {_,M,_,M,_,_},
@@ -318,7 +318,7 @@ PROGMEM byte Fou[7][6] =
  {_,_,_,M,_,_},
  {_,_,_,M,_,_}};
 
-PROGMEM byte Fiv[7][6] =
+const PROGMEM byte Fiv[7][6] =
 {{M,M,M,M,M,_},
  {M,_,_,_,_,_},
  {M,M,M,M,_,_},
@@ -327,7 +327,7 @@ PROGMEM byte Fiv[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte Six[7][6] =
+const PROGMEM byte Six[7][6] =
 {{_,_,M,M,_,_},
  {_,M,_,_,_,_},
  {M,_,_,_,_,_},
@@ -336,7 +336,7 @@ PROGMEM byte Six[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte Sev[7][6] =
+const PROGMEM byte Sev[7][6] =
 {{M,M,M,M,M,_},
  {_,_,_,_,M,_},
  {_,_,_,M,_,_},
@@ -345,7 +345,7 @@ PROGMEM byte Sev[7][6] =
  {_,M,_,_,_,_},
  {_,M,_,_,_,_}};
 
-PROGMEM byte Eig[7][6] =
+const PROGMEM byte Eig[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -354,7 +354,7 @@ PROGMEM byte Eig[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-PROGMEM byte Nin[7][6] =
+const PROGMEM byte Nin[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,_,M,_},
@@ -363,7 +363,7 @@ PROGMEM byte Nin[7][6] =
  {_,_,_,M,_,_},
  {_,M,M,_,_,_}};
 
-PROGMEM byte Zer[7][6] =
+const PROGMEM byte Zer[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
  {M,_,_,M,M,_},
@@ -372,9 +372,9 @@ PROGMEM byte Zer[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
-void display(int letter[7][6]) {
+void display(const byte letter[7][6]) {
   for (int t = 0; t < 6; t++) {
-    for (int i = 0; i <7; i++) {
+    for (int i = 0; i < 7; i++) {
       digitalWrite(i + 2, letter[i][t]);
     }
     delay(10);
@@ -410,7 +410,7 @@ void displayLetter(char c) {
     case 'L':
       display(L); break;
     case 'M':
-      display(M); break;
+      display(lM); break;
     case 'N':
       display(N); break;
     case 'O':
