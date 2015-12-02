@@ -307,7 +307,7 @@ const PROGMEM int Zer[5][4] =
   delay(5);
 }*/
 
-void display(int letter[5][4]) {
+void display(const int letter[5][4]) {
   for (int t = 0; t < 4; t++) {
     for (int i = 0; i < 5; i++) {
       digitalWrite(i + 2, letter[i][t]);
