@@ -412,92 +412,49 @@ void display(const byte letter[7][6]) {
 void displayLetter(char c) {
   c = toupper(c);
   switch (c) {
-    case ' ':
-      display(Sp); break;
-    case '!':
-      display(Ex); break;
-    case '(':
-      display(Op); break;
-    case ')':
-      display(Cp); break;
-    case ',':
-      display(Co); break;
-    case '.':
-      display(Pe); break;
-    case '/':
-      display(Fs); break;
-    case '0':
-      display(Zer); break;
-    case '1':
-      display(One); break;
-    case '2':
-      display(Two); break;
-    case '3':
-      display(Thr); break;
-    case '4':
-      display(Fou); break;
-    case '5':
-      display(Fiv); break;
-    case '6':
-      display(Six); break;
-    case '7':
-      display(Sev); break;
-    case '8':
-      display(Eig); break;
-    case '9':
-      display(Nin); break;
-    case '?':
-      display(Qu); break;
-    case 'A':
-      display(A); break;
-    case 'B':
-      display(B); break;
-    case 'C':
-      display(C); break;
-    case 'D':
-      display(D); break;
-    case 'E':
-      display(E); break;
-    case 'F':
-      display(F); break;
-    case 'G':
-      display(G); break;
-    case 'H':
-      display(H); break;
-    case 'I':
-      display(I); break;
-    case 'J':
-      display(J); break;
-    case 'K':
-      display(K); break;
-    case 'L':
-      display(L); break;
-    case 'M':
-      display(lM); break;
-    case 'N':
-      display(N); break;
-    case 'O':
-      display(O); break;
-    case 'P':
-      display(P); break;
-    case 'Q':
-      display(Q); break;
-    case 'R':
-      display(R); break;
-    case 'S':
-      display(S); break;
-    case 'T':
-      display(T); break;
-    case 'U':
-      display(U); break;
-    case 'V':
-      display(V); break;
-    case 'W':
-      display(W); break;
-    case 'Y':
-      display(X); break;
-    case 'Z':
-      display(Z); break;
+    case ' ': display(Sp); break;
+    case '!': display(Ex); break;
+    case '(': display(Op); break;
+    case ')': display(Cp); break;
+    case ',': display(Co); break;
+    case '.': display(Pe); break;
+    case '/': display(Fs); break;
+    case '0': display(Zer); break;
+    case '1': display(One); break;
+    case '2': display(Two); break;
+    case '3': display(Thr); break;
+    case '4': display(Fou); break;
+    case '5': display(Fiv); break;
+    case '6': display(Six); break;
+    case '7': display(Sev); break;
+    case '8': display(Eig); break;
+    case '9': display(Nin); break;
+    case '?': display(Qu); break;
+    case 'A': display(A); break;
+    case 'B': display(B); break;
+    case 'C': display(C); break;
+    case 'D': display(D); break;
+    case 'E': display(E); break;
+    case 'F': display(F); break;
+    case 'G': display(G); break;
+    case 'H': display(H); break;
+    case 'I': display(I); break;
+    case 'J': display(J); break;
+    case 'K': display(K); break;
+    case 'L': display(L); break;
+    case 'M': display(lM); break;
+    case 'N': display(N); break;
+    case 'O': display(O); break;
+    case 'P': display(P); break;
+    case 'Q': display(Q); break;
+    case 'R': display(R); break;
+    case 'S': display(S); break;
+    case 'T': display(T); break;
+    case 'U': display(U); break;
+    case 'V': display(V); break;
+    case 'W': display(W); break;
+    case 'Y': display(X); break;
+    case 'Z': display(Z); break;
   }
 }
 
