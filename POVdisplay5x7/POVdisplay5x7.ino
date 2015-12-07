@@ -474,10 +474,11 @@ void displayString(String s) {
 }
 
 void setup() {
-  for (int i = 2; i < 9; i++) {
+  for (int i = 2; i < 10; i++) {
     pinMode(i, OUTPUT);
   }
   pinMode(13, OUTPUT);
+  digitalWrite(9, LOW);
   digitalWrite(13, LOW);
 }
 
