@@ -1,4 +1,4 @@
-byte _ = B0;
+/*byte _ = B0;
 byte M = B1;
 
 byte A[7][6] =
@@ -375,9 +375,9 @@ void display(byte letter[7][6]) {
     for (int i = 0; i < 7; i++) {
       digitalWrite(i + 2, letter[i][t]);
     }
-    delay(10);
+    delay(2);
   }
-  delay(5);
+  delay(1);
 }
 
 void displayLetter(char c) {
@@ -484,4 +484,25 @@ void setup() {
 
 void loop() {
   displayString("test ");
+}
+*/
+
+void setup()
+{
+  for (int i=2; i<=9; i++){
+    pinMode(i, OUTPUT);
+  }
+  
+    digitalWrite(9, LOW);
+pinMode(13, OUTPUT);
+digitalWrite(13, LOW);
+}
+
+void loop()
+{
+  for (int i=2; i<9; i=i+2){
+     digitalWrite(i, HIGH);
+  }
+     for (int i=3; i<8; i=i+2){
+     digitalWrite(i, LOW);}
 }
