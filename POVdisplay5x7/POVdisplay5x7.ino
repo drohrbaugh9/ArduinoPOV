@@ -1,6 +1,8 @@
-/*byte _ = B0;
+//The matrices below are matrics of bytes, so these two bytes make the code more space efficient (and the letters more visible)
+byte _ = B0;
 byte M = B1;
 
+//lines 5 - 374 are the letter, number, and punctuation matrices
 byte A[7][6] =
 {{_,M,M,M,_,_},
  {M,_,_,_,M,_},
@@ -109,6 +111,7 @@ byte L[7][6] =
  {M,_,_,_,_,_},
  {M,M,M,M,M,_}};
 
+//this matrix is named differently because M is one of the bytes defined at the top
 byte lM[7][6] =
 {{M,_,_,_,M,_},
  {M,M,_,M,M,_},
@@ -370,6 +373,7 @@ byte Zer[7][6] =
  {M,_,_,_,M,_},
  {_,M,M,M,_,_}};
 
+//this method displays the pattern specified by the matrix parameter
 void display(byte letter[7][6]) {
   for (int t = 0; t < 6; t++) {
     for (int i = 0; i < 7; i++) {
@@ -380,6 +384,7 @@ void display(byte letter[7][6]) {
   delay(1);
 }
 
+//given a char, this method calls display with the corresponding letter, number, or punctuation matrix
 void displayLetter(char c) {
   c = toupper(c);
   switch (c) {
@@ -466,6 +471,7 @@ void displayLetter(char c) {
   }
 }
 
+//given a String, this method breaks it into chars and displays each char by calling displayLetter()
 void displayString(String s) {
   //for (int i = 0; i < sizeof(s); i++) {
   for (int i = 0; i < 6 || i < sizeof(s); i++) {
@@ -474,40 +480,34 @@ void displayString(String s) {
 }
 
 void setup() {
+ //set all the pins (including pin 9, used as GND) to OUTPUT
   for (int i = 2; i < 10; i++) {
     pinMode(i, OUTPUT);
   }
   pinMode(13, OUTPUT);
+  //"connect" pin 9 to GND
   digitalWrite(9, LOW);
+  //turn off the LED attached to pin 13
   digitalWrite(13, LOW);
 }
 
 void loop() {
-  displayString("test ");
-}
-*/
-
-void setup()
-{
-  for (int i=2; i<=9; i++){
-    pinMode(i, OUTPUT);
-  }
-  
-    digitalWrite(9, LOW);
-pinMode(13, OUTPUT);
-digitalWrite(13, LOW);
+ //I have the message "communism " broken up into 6-char Strings because of memory limits
+ displayString("commun");
+ displayString("ism ");
 }
 
-/*void loop()
-{
+//the methods below can be called from the loop() method to produce cool patterns
+//circles() produces 4 concentric circles, spiral() makes a spiral
+void circles() {
   for (int i=2; i<9; i=i+2){
      digitalWrite(i, HIGH);
   }
      for (int i=3; i<8; i=i+2){
      digitalWrite(i, LOW);}
-}*/
+}
 
-void loop() {
+void spiral() {
   for (int i = 2; i < 9; i++) {
     digialWrite(i, HIGH);
     delay(25);
