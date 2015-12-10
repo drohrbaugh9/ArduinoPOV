@@ -498,11 +498,19 @@ pinMode(13, OUTPUT);
 digitalWrite(13, LOW);
 }
 
-void loop()
+/*void loop()
 {
   for (int i=2; i<9; i=i+2){
      digitalWrite(i, HIGH);
   }
      for (int i=3; i<8; i=i+2){
      digitalWrite(i, LOW);}
+}*/
+
+void loop() {
+  for (int i = 2; i < 9; i++) {
+    digialWrite(i, HIGH);
+    delay(25);
+    digitalWrite(i, LOW);
+  }
 }
