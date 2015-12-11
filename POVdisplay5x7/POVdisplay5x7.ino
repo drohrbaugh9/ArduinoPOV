@@ -1,4 +1,4 @@
-//The matrices below are matrics of bytes, so these two bytes make the code more space efficient (and the letters more visible)
+//The matrices below are matrices of bytes, so these two bytes make the code more space efficient (and the letters more visible)
 byte _ = B0;
 byte M = B1;
 
@@ -40,7 +40,7 @@ byte D[7][6] =
  {M,M,M,M,_,_}};
 
 byte E[7][6] =
-{{M,M,M,M,_,_},
+{{M,M,M,M,M,_},
  {M,_,_,_,_,_},
  {M,_,_,_,_,_},
  {M,M,M,M,_,_},
