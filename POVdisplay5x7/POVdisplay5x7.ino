@@ -1,6 +1,8 @@
+//The matrices below are matrices of bytes, so these two bytes make the code more space efficient (and the letters more visible)
 byte _ = B0;
 byte M = B1;
 
+//lines 5 - 374 are the letter, number, and punctuation matrices
 byte A[7][6] =
 {{_,M,M,M,_},
  {M,_,_,_,M},
@@ -38,7 +40,7 @@ byte D[7][6] =
  {M,M,M,M,_}};
 
 byte E[7][6] =
-{{M,M,M,M,_},
+{{M,M,M,M,M},
  {M,_,_,_,_},
  {M,_,_,_,_},
  {M,M,M,M,_},
@@ -109,6 +111,7 @@ byte L[7][6] =
  {M,_,_,_,_},
  {M,M,M,M,M}};
 
+//this matrix is named differently because M is one of the bytes defined at the top
 byte lM[7][6] =
 {{M,_,_,_,M},
  {M,M,_,M,M},
@@ -369,16 +372,20 @@ byte Zer[7][6] =
  {M,M,_,_,M},
  {M,_,_,_,M},
  {_,M,M,M,_}};
+
+//this method displays the pattern specified by the matrix parameter
+>>>>>>> 37d6db26dd731bae4675923e0f9d307bbc8c2f4f
 void display(byte letter[7][6]) {
   for (byte t = B0; t < B110; t++) {
     for (byte i = 0; i < B111; i++) {
       digitalWrite(i + 2, letter[i][t]);
     }
-    delay(10);
+    delay(2);
   }
-  delay(5);
+  delay(1);
 }
 
+//given a char, this method calls display with the corresponding letter, number, or punctuation matrix
 void displayLetter(char c) {
   c = toupper(c);
   switch (c) {
@@ -465,6 +472,7 @@ void displayLetter(char c) {
   }
 }
 
+//given a String, this method breaks it into chars and displays each char by calling displayLetter()
 void displayString(String s) {
   //your message can only be at most 6 characters long
   for (int i = 0; i < 6 || i < sizeof(s); i++) {
@@ -473,19 +481,39 @@ void displayString(String s) {
 }
 
 void setup() {
-  for (byte i = 2; i < B1001; i++) {
+ //set all the pins (including pin 9, used as GND) to OUTPUT
+  for (int i = 2; i < 10; i++) {
     pinMode(i, OUTPUT);
   }
   pinMode(13, OUTPUT);
+  //"connect" pin 9 to GND
+  digitalWrite(9, LOW);
+  //turn off the LED attached to pin 13
   digitalWrite(13, LOW);
 }
 
 void loop() {
-  displayString("abcdef");
-  displayString("ghijkl");
-  displayString("mnopqr");
-  displayString("stuvwx");
-  displayString("yz .,!");
-  displayString("?12345");
-  displayString("67890");
+ /*
+ //I have the message "communism " broken up into 6-char Strings because of memory limits
+ displayString("commun");
+ displayString("ism ");*/
+ displayString("test ");
+}
+
+//the methods below can be called from the loop() method to produce cool patterns
+//circles() produces 4 concentric circles, spiral() makes a spiral
+void circles() {
+  for (int i=2; i<9; i=i+2){
+     digitalWrite(i, HIGH);
+  }
+     for (int i=3; i<8; i=i+2){
+     digitalWrite(i, LOW);}
+}
+
+void spiral() {
+  for (int i = 2; i < 9; i++) {
+    digitalWrite(i, HIGH);
+    delay(25);
+    digitalWrite(i, LOW);
+  }
 }
