@@ -492,11 +492,16 @@ void setup() {
 }
 
 void loop() {
- /*
- //I have the message "communism " broken up into 6-char Strings because of memory limits
- displayString("commun");
- displayString("ism ");*/
- displayString("test ");
+ for (int i = 0; i <= 30; i++) {
+   displayString("lenin ");
+   delay(20);
+ }
+ for (int i = 0; i <= 500000; i++) {
+   circles();
+ }
+ for (int i = 0; i <= 500000; i++) {
+   spiral();
+ }
 }
 
 //the methods below can be called from the loop() method to produce cool patterns
