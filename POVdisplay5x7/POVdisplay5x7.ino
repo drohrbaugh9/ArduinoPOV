@@ -374,7 +374,6 @@ byte Zer[7][6] =
  {_,M,M,M,_}};
 
 //this method displays the pattern specified by the matrix parameter
->>>>>>> 37d6db26dd731bae4675923e0f9d307bbc8c2f4f
 void display(byte letter[7][6]) {
   for (byte t = B0; t < B110; t++) {
     for (byte i = 0; i < B111; i++) {
@@ -497,10 +496,10 @@ void loop() {
    displayString("lenin ");
    delay(20);
  }
- for (int i = 0; i <= 500000; i++) {
+ for (int i = 0; i <= 30000; i++) {
    circles();
  }
- for (int i = 0; i <= 500000; i++) {
+ for (int i = 0; i <= 30; i++) {
    spiral();
  }
 }
