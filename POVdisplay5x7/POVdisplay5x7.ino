@@ -492,16 +492,16 @@ void setup() {
 }
 
 void loop() {
- for (int i = 0; i <= 30; i++) {
-   displayString("lenin ");
-   delay(20);
- }
- for (int i = 0; i <= 30000; i++) {
+ //for (int i = 0; i <= 30; i++) {
+   displayString("LCHS ");
+   delay(30);
+ //}
+ /*for (int i = 0; i <= 30000; i++) {
    circles();
  }
  for (int i = 0; i <= 30; i++) {
    spiral();
- }
+ }*/
 }
 
 //the methods below can be called from the loop() method to produce cool patterns
